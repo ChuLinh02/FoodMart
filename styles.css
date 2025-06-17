@@ -29,25 +29,30 @@
 html {
   font-size: 100%; /* Base font size */
   font-family: var(--header-text-font);
+  scroll-behavior: smooth; /* Smooth scrolling */
 }
 
 body {
-  height: 100vh; /* Full viewport height */
+  height: 300vh; /* Full viewport height */
 }
 
 /* header */
 .header {
+  position: fixed; /* Fixed position */
+  top: 0; /* Position at the top */
+  left: 0; /* Position at the left */
+  right: 0; /* Position at the right */
+  z-index: 1;
   display: flex; /* Use flexbox for layout */
   justify-content: space-between; /* Space between elements */
   align-items: center; /* Center items vertically */
   background-color: var(
     --background-primary-color
   ); /* Background color of the header */
-  padding: 0.5rem 0; /* Padding around the header */
+  padding: 1.5rem 0; /* Padding around the header */
   border-bottom: 1.5px solid var(--border-primary-color); /* Bottom border */
   margin-right: 0.5rem; /* Margin to the right */
   margin-left: 0.5rem; /* Margin to the left */
-  height: 33.3333333333%; /* Height of the header */
   font-family: var(--header-text-font); /* Font for header text */
   font-size: 1rem; /* Font size for header text */
 }
@@ -174,6 +179,7 @@ body {
 /* css banner section */
 .banner {
   padding: 0 1.5rem; /* Padding around the banner */
+  margin-top: 8rem; /* Margin at the top */
 }
 
 .banner-header {
@@ -443,8 +449,9 @@ body {
 .categories__list {
   position: relative;
   display: flex;
-  overflow-x: auto;
   width: 100%;
+  gap: 1.5rem;
+  overflow: hidden;
 }
 
 .categories__item {
@@ -460,10 +467,15 @@ body {
   transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
   padding: 60px 20px;
   border-radius: 1rem;
-  width: 25%;
   cursor: pointer;
+  font-weight: bold;
+  min-width: 290px;
 }
 
+.categories__item:hover {
+  box-shadow: 0 5px 22px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
 
 
 
