@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hallie's Web</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <!-- Name -->
+      <div>
+        <img
+          src="https://themewagon.github.io/FoodMart/images/logo.png"
+          alt="header-logo"
+          class="header_logo"
+        />
+      </div>
+
+      <!-- Search bar -->
+      <div class="search-bar">
+        <!-- Category Search bar -->
+        <select class="search-bar_category">
+          <option>All Categories</option>
+          <option>Groceries</option>
+          <option>Drinks</option>
+          <option>Chocolates</option>
+        </select>
+
+        <!-- Product Search bar -->
+        <div class="search-bar_input">
+          <!-- Input -->
+          <input
+            type="text"
+            placeholder="Search for more than 20,000 products"
+            class="search-bar_input-field"
+          />
+          <!-- Icon -->
+          <i class="search-bar_input fa-solid fa-magnifying-glass"></i>
+        </div>
+      </div>
+
+      <div class="header-right">
+        <!-- Phone support -->
+        <div class="header-right_phone">
+          <p class="header-right_phone-text">For Support?</p>
+          <p class="header-right_phone-number">+980-34984089</p>
+        </div>
+
+        <!-- Icon-->
+        <div class="header-right_icon">
+          <i class="header-right_icon-user fa-regular fa-user"></i>
+          <i class="header-right_icon-heart fa-regular fa-heart"></i>
+        </div>
+
+        <!-- Your cart -->
+        <div class="header-right_cart">
+          <span class="header-right_cart-text">
+            Your Cart
+            <i class="fa-solid fa-caret-down"></i>
+          </span>
+          <span class="header-right_cart-number">$1290.00</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Section: Banner -->
+    <section class="banner">
+      <!-- Header of banner -->
+      <div class="banner-header">
+        <!-- Shop filter -->
+        <div class="banner-header_shop">
+          <select>
+            <option>Shop by Departments</option>
+            <option>Groceries</option>
+            <option>Drinks</option>
+            <option>Chocolates</option>
+          </select>
+        </div>
+        <!-- Navigation -->
+        <nav class="banner-header_nav">
+          <ul class="banner-header_nav-list">
+            <li>Women</li>
+            <li>Men</li>
+            <li>Kids</li>
+            <li>Accessories</li>
+            <li>
+              Pages
+              <i class="fa-solid fa-caret-down"></i>
+            </li>
+            <li>Brand</li>
+            <li>Sale</li>
+            <li>Blog</li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="banner-content">
+        <!-- Content block left-->
+        <div class="banner-left">
+          <div class="banner-slides"></div>
+
+          <!-- ... -->
+          <div class="dot-navigation">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+
+        <!-- Banner content block right -->
+        <div class="banner-right">
+          <!-- Top block -->
+          <div class="block-fruit-and-vegetables">
+            <!-- Content -->
+            <div class="block-fruit-and-vegetables__content">
+              <span class="sale-off">20% Off</span>
+              <div class="sale-text-container">
+                <span class="sale-line"></span>
+                <span class="sale-text">SALE</span>
+              </div>
+              <h3>Fruits & Vegetables</h3>
+              <button class="btn-shop-collection">
+                Shop Collection
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Bottom block -->
+          <div class="block-baked-products">
+            <div class="block-baked-products__content">
+              <span class="sale-off">15% Off</span>
+              <div class="sale-text-container">
+                <span class="sale-line"></span>
+                <span class="sale-text">SALE</span>
+              </div>
+
+              <h3>Baked Products</h3>
+              <button class="btn-shop-collection">
+                Shop Collection
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Categories -->
+    <section class="categories">
+      <!-- Section -->
+      <div class="categories__header">
+        <h3 class="categories__title">Categories</h3>
+        <div class="categories__controller">
+          <div class="categories__view-all">
+            <a href="">View All Categories</a>
+            <i class="fa-solid fa-arrow-right-long"></i>
+          </div>
+          <div class="categories__slide-buttons">
+            <button class="btn-categories-slide arrow-left">
+              <i class="fa-solid fa-angle-left"></i>
+            </button>
+            <button class="btn-categories-slide arrow-right">
+              <i class="fa-solid fa-angle-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <ul class="categories__list"></ul>
+
+    </section>
+
+    <footer></footer>
+  </body>
+  <script type="module" src="script.js"></script>
+</html>

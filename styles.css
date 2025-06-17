@@ -1,0 +1,469 @@
+:root {
+  --border-primary-color: #f7f7f7; /* Primary border color */
+  --background-secondary-color: rgb(
+    248,
+    248,
+    248
+  ); /* Secondary background color */
+  --background-primary-color: #ffffff; /* Primary background color */
+  --text-secondary-color: #747474;
+  --text-primary-color: #000000; /* Primary text color */
+  --text-third-color: #ffffff; /* Tertiary text color */
+  --number-secondary-color: #222222; /* Secondary number color */
+  --border-secondary-color: #0d6efd40; /* Secondary border color */
+  --header-number-font: "Nuris", sans-serif; /* Font for header numbers */
+  --header-text-font: "Open Sans", sans-serif; /* Font for header text */
+  --text-secondary-font: "Times New Roman", serif; /* Font for secondary text */
+  --text-third-font: "Nunito", sans-serif; /* Font for tertiary text */
+  --background-third-color: #e6f3fa; /* Tertiary background color */
+  --background-fourth-color: #eef5e5; /* Quaternary background color */
+  --background-fifth-color: #f9ebe7; /* Quinary background color */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+html {
+  font-size: 100%; /* Base font size */
+  font-family: var(--header-text-font);
+}
+
+body {
+  height: 100vh; /* Full viewport height */
+}
+
+/* header */
+.header {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between elements */
+  align-items: center; /* Center items vertically */
+  background-color: var(
+    --background-primary-color
+  ); /* Background color of the header */
+  padding: 0.5rem 0; /* Padding around the header */
+  border-bottom: 1.5px solid var(--border-primary-color); /* Bottom border */
+  margin-right: 0.5rem; /* Margin to the right */
+  margin-left: 0.5rem; /* Margin to the left */
+  height: 33.3333333333%; /* Height of the header */
+  font-family: var(--header-text-font); /* Font for header text */
+  font-size: 1rem; /* Font size for header text */
+}
+
+.header_logo {
+  height: 54px;
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
+  padding: 5px 10px; /* Padding around the logo */
+}
+
+/* Search bar */
+.search-bar {
+  display: flex; /* Use flexbox for layout */
+  background-color: var(
+    --background-secondary-color
+  ); /* Background color of the search bar */
+  padding: 5px 10px; /* Padding around the search bar */
+  border-radius: 14px; /* Rounded corners */
+}
+
+.search-bar_category {
+  font-size: inherit; /* Inherit font size */
+  background-color: var(
+    --background-secondary-color
+  ); /* Background color of the category */
+  border: none; /* No border */
+  outline: none;
+  color: var(--text-secondary-color); /* Text color */
+  text-transform: capitalize; /* Capitalize text */
+  margin-right: 36px; /* Margin to the right */
+  padding: 6px 36px 6px 12px; /* Padding around the category */
+  border: 3.5px solid var(--background-secondary-color); /* Border around the category */
+  border-radius: 14px; /* Rounded corners on focus */
+  transition: all 0.2s ease-in-out; /* Smooth transition for border change */
+}
+
+.search-bar_category:focus,
+.search-bar_input-field:focus {
+  border: 3.5px solid var(--border-secondary-color); /* Border on focus */
+  border-radius: 14px; /* Rounded corners on focus */
+}
+
+.search-bar_input {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
+  color: var(--text-secondary-color);
+  outline: none; /* No outline */
+}
+
+.search-bar_input-field {
+  background-color: var(
+    --background-secondary-color
+  ); /* Background color of the category */
+  border: none; /* No border */
+  outline: none;
+  color: var(--text-secondary-color); /* Text color */
+  margin-right: 30px; /* Margin to the right */
+  padding: 6px 36px 6px 12px; /* Padding around the category */
+  border: 3.5px solid var(--background-secondary-color); /* Border around the input */
+  border-radius: 14px; /* Rounded corners on focus */
+  transition: all 0.2s ease-in-out; /* Smooth transition for border change */
+  font-size: inherit; /* Inherit font size */
+}
+
+/* Header right block */
+.header-right {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
+  gap: 3rem; /* Space between elements */
+  margin-right: 0.25rem; /* Margin to the right */
+  margin-left: 0.25rem; /* Margin to the left */
+  width: 33.3333333333%; /* Height of the header right block */
+}
+
+.header-right_phone {
+  display: block; /* Display as block */
+  text-align: right; /* Align text to the right */
+  margin-right: 0.25rem; /* Margin to the right */
+  margin-left: 0.25rem; /* Margin to the left */
+}
+
+.header-right_phone-text {
+  color: var(--text-secondary-color); /* Text color */
+  text-transform: capitalize; /* Capitalize text */
+}
+
+.header-right_phone-number,
+.header-right_cart-number {
+  color: var(--number-secondary-color); /* Number color */
+  font-weight: 700; /* Bold text */
+  font-family: var(--header-number-font);
+}
+
+.header-right_icon {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
+  gap: 1rem; /* Space between icons */
+  color: var(--text-primary-color);
+}
+
+.header-right_icon-heart,
+.header-right_icon-user {
+  background-color: var(--background-secondary-color);
+  padding: 0.5rem; /* Padding around the icons */
+  border-radius: 50%; /* Rounded corners */
+  margin-right: 0.25rem; /* Margin to the right */
+  margin-left: 0.25rem; /* Margin to the left */
+}
+
+.header-right_cart {
+  display: block; /* Display as block */
+  text-align: left; /* Align text to justify */
+  margin-right: 0.25rem; /* Margin to the right */
+  margin-left: 0.25rem; /* Margin to the left */
+  row-gap: 0.5rem; /* Space between rows */
+}
+
+.header-right_cart-text {
+  color: var(--text-secondary-color); /* Text color */
+  text-transform: capitalize; /* Capitalize text */
+}
+
+/* css banner section */
+.banner {
+  padding: 0 1.5rem; /* Padding around the banner */
+}
+
+.banner-header {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
+  height: 6rem; /* Height of the banner header */
+  gap: 3rem; /* Space between elements */
+  color: var(--text-secondary-color);
+  padding: 1rem 0; /* Padding around the header */
+}
+
+.banner-header_shop > select {
+  font-size: inherit; /* Inherit font size */
+  border: none;
+  outline: none;
+}
+
+.banner-header_nav-list {
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  gap: 1.5rem; /* Space between elements */
+  list-style-type: none; /* No bullet points */
+  text-transform: capitalize; /* Capitalize text */
+}
+
+/* banner content */
+.banner-content {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-around; /* Space between elements */
+  align-items: top; /* Center items vertically */
+  gap: 2rem; /* Space between blocks */
+  position: relative; /* Position relative for absolute positioning of child elements */
+}
+
+.banner-left {
+  width: 60%; /* Width of the content block */
+  background-color: var(
+    --background-third-color
+  ); /* Background color of the left block */
+  border-radius: 0.5rem; /* Rounded corners */
+  padding: 2.5rem; /* Padding around the left block */
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between elements */
+}
+
+.banner-left-image {
+  width: 236px; /* Width of the image */
+  align-self: start; /* Align image to the start */
+}
+
+.banner-content-item > .banner-left-content {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: center; /* Center items vertically */
+  gap: 1.5rem; /* Space between elements */
+  width: 60%; /* Width of the content block */
+}
+
+.banner-left-content > span {
+  color: #ffc43f; /* Color for the span text */
+  font-size: 2rem; /* Font size for the span text */
+  font-family: var(--text-secondary-font); /* Font for the span text */
+}
+
+.banner-left-content > p {
+  color: var(--text-secondary-color); /* Color for the paragraph text */
+  line-height: 2rem; /* Line height for the paragraph text */
+  width: 80%; /* Width of the paragraph text */
+}
+
+.banner-left-content > button {
+  background-color: unset; /* No background color */
+  border: 1px solid black; /* Border around the button */
+  border-radius: 0.5rem; /* Rounded corners */
+  padding: 1rem 1.5rem; /* Padding around the button */
+  text-transform: uppercase; /* Uppercase text */
+  width: 40%; /* Width of the button */
+}
+
+.banner-left-content > button:hover {
+  background-color: black; /* Background color on hover */
+  transition: all 0.2s ease-in-out; /* Smooth transition for hover effect */
+  cursor: pointer; /* Pointer cursor on hover */
+  color: white; /* Text color on hover */
+}
+
+.banner-left-content > h2 {
+  font-size: 3.5rem; /* Font size for the heading */
+  width: 80%; /* Width of the heading */
+  font-family: var(--text-third-font);
+}
+
+.dot-navigation {
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  gap: 0.5rem; /* Space between dots */
+  position: absolute; /* Position absolute for positioning within the parent */
+  bottom: 2.5rem; /* Position at the bottom */
+  left: 25%; /* Center horizontally */
+}
+
+.dot-navigation > span {
+  width: 1rem; /* Width of the dot */
+  height: 1rem; /* Height of the dot */
+  border-radius: 50%; /* Rounded corners for the dot */
+  cursor: pointer;
+}
+
+.dot {
+  background-color: white; /* Background color of the dot */
+}
+
+.dot-active.dot {
+  background-color: #ffc43f;
+}
+
+.banner-right {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack elements vertically */
+  width: 40%; /* Width of the right block */
+  gap: 2rem; /* Space between elements */
+}
+
+.block-fruit-and-vegetables {
+  background-color: var(
+    --background-fourth-color
+  ); /* Background color for fruit and vegetables block */
+  background-image: url("https://themewagon.github.io/FoodMart/images/ad-image-1.png"); /* Background image for fruit and vegetables block */
+  height: 50%;
+  background-repeat: no-repeat;
+  background-position: right bottom; /* Position background image at the bottom right */
+  border-radius: 0.5rem; /* Rounded corners for the block */
+}
+
+.block-baked-products {
+  background-color: var(
+    --background-fifth-color
+  ); /* Background color for baked products block */
+  background-image: url("https://themewagon.github.io/FoodMart/images/ad-image-2.png"); /* Background image for baked products block */
+  height: 50%;
+  background-repeat: no-repeat;
+  background-position: right bottom; /* Position background image at the bottom right */
+  border-radius: 0.5rem; /* Rounded corners for the block */
+}
+
+.block-fruit-and-vegetables__content,
+.block-baked-products__content {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack elements vertically */
+  align-items: self-start; /* Align items to the left */
+  gap: 0.75rem; /* Space between elements */
+  padding: 3rem 2rem; /* Padding around the content */
+  width: 50%; /* Width of the content block */
+}
+
+.block-fruit-and-vegetables__content > h3,
+.block-baked-products__content > h3 {
+  font-size: 2rem; /* Font size for the heading */
+  color: var(--text-primary-color); /* Text color for the heading */
+  font-family: var(--text-third-font);
+}
+
+.sale-text-container {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
+  gap: 1rem; /* Space between elements */
+  color: var(--text-secondary-color);
+  font-size: 0.5rem; /* Font size for the sale text */
+}
+
+.sale-off {
+  font-size: 2rem; /* Font size for the sale off text */
+  text-transform: capitalize; /* Capitalize text */
+  color: var(--text-primary-color); /* Color for the sale off text */
+  font-family: var(--text-secondary-font); /* Font for the sale off text */
+}
+
+.sale-line {
+  width: 5rem; /* Width of the sale line */
+  height: 0.5px; /* Height of the sale line */
+  background-color: var(
+    --text-secondary-color
+  ); /* Background color of the sale line */
+}
+
+.btn-shop-collection {
+  background: unset; /* No background color */
+  border: none; /* No border */
+  color: var(--text-secondary-color); /* Text color */
+  text-transform: capitalize; /* Capitalize text */
+  line-height: 2rem; /* Line height for the button text */
+}
+
+/* banner container item */
+.banner-slides {
+  display: flex;
+  overflow: hidden; /* Hide overflow */
+  width: 100%; /* Full width */
+}
+
+.banner-content-item {
+  flex-shrink: 0; /* Prevent shrinking */
+  display: flex; /* Use flexbox for layout */
+  width: 100%; /* Full width of the item */
+}
+
+/* Section: Categories */
+.categories {
+  padding: 0 1.5rem;
+  margin-top: 3rem;
+}
+
+.categories__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  align-items: center;
+}
+
+.categories__title {
+    font-size: 2rem;
+    font-family: var(--text-third-font);
+    color: var(--number-secondary-color);
+    font-weight: 700;
+}
+
+.categories__controller {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.categories__view-all {
+  font-weight: 600;
+  font-family: var(--header-text-font);
+  color: #787878;
+  text-align: right;
+  text-transform: capitalize;
+
+}
+
+.categories__view-all > a {
+  text-decoration: none; /* Remove underline from link */
+  color: inherit; /* Inherit color from parent */
+}
+
+.categories__slide-buttons {
+}
+
+.btn-categories-slide {
+  width: 2rem;
+  height: 2rem;
+  color:#222222;
+  border: none;
+  border-radius: 10px;
+  background: #F1F1F1;
+  cursor: pointer;
+}
+
+.btn-categories-slide:hover {
+  background: #ffc43f;
+  transition: all 0.2s ease-in-out;
+}
+
+.categories__list {
+  position: relative;
+  display: flex;
+  overflow-x: auto;
+  width: 100%;
+}
+
+.categories__item {
+  list-style: none; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  gap: 1rem; 
+  background: white;
+  border : 1px solid #fbfbfb; 
+  box-shadow: 0 5px 22px rgba(0, 0, 0, 0.04); 
+  text-align: center;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+  padding: 60px 20px;
+  border-radius: 1rem;
+  width: 25%;
+  cursor: pointer;
+}
+
+
+
+
