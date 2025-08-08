@@ -4,6 +4,7 @@ import banners from "./mock/mock-data-banner.js";
 import categories from "./mock/mock-data-categories.js";
 import { disableBtn, enableBtn } from "./utils.js";
 import trendingProducts from "./mock/mock-data-trending-products.js";
+import features from "./mock/mock-data-features.js";
 
 function renderBanners(banners) {
   const bannerContainer = document.querySelector(".banner-slides");
@@ -168,3 +169,24 @@ function renderTrendingProducts(products) {
 }
 
 renderTrendingProducts(trendingProducts);
+
+// Handle Features
+function renderFeatures(features) {
+  const featuresContainer = document.querySelector(".features__list");
+  let featuresHTML = "";
+  for (const feature of features) {
+    featuresHTML += `
+      <li class="features__item">
+        <div class="features__item-container">
+          <div class="features__icon">${feature.icon}</div>
+          <h4 class="features__title">${feature.title}</h4>
+        </div>
+        <p class="features__description">${feature.description}</p>
+      </li>
+    `;
+    console.log(feature.icon); // Debugging line to check icon rendering
+  }
+  featuresContainer.innerHTML = featuresHTML;
+}
+
+renderFeatures(features);

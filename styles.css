@@ -626,3 +626,34 @@ body {
   color: var(--text-secondary-color);
   font-size: large;
 }
+
+/* Section: Features */
+.features__list {
+  display: flex; /* Use flexbox for layout */
+  gap: 1rem; /* Space between items */
+  padding: 0 1.5rem; /* Padding around the list */
+  list-style: none; /* No bullet points */
+  background-color: rgb(255, 249, 235); /* Background color of the list */
+} 
+
+.features__item {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack elements vertically */
+  gap: 1rem; /* Space between elements */
+  padding: 1rem; /* Padding around the item */
+  text-align: left; /* Center text */
+}
+
+.features__item-container {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
+  gap: 1rem; /* Space between icon and text */
+}
+
+.features__item-container > h4 {
+  font-size: 1.1rem; /* Font size for the title */
+  font-weight: 800;
+  color: var(--text-primary-color); /* Text color for the title */
+  font-family: var(--text-third-font); /* Font for the title */
+}
+
